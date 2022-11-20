@@ -6,7 +6,7 @@ const Accordion = ({ items }) => {
             <React.Fragment key={item.title}>
                 <div
                     className="title active"
-                    // empty () will prevent the immediate console log
+                    // empty () will prevent the immediate console log.
                     onClick={() => console.log('Title Clicked', index)}>
 
 
