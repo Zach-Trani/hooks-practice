@@ -1,5 +1,7 @@
 import React from "react";
 
+// only Accrodion will know which question is expanded: activeIndex
+
 const Accordion = ({ items }) => {
     const renderedItems = items.map((item, index) => {
         return (
