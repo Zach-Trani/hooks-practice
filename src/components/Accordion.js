@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 // only Accrodion will know which question is expanded: activeIndex
 
 // helper method outside the body of the function component helps with organization.
 const Accordion = ({ items }) => {
+    // array destructuring
+    // [piece-of-state, function-to-change-this-piece-of-state] = useState(initial-value-for-this-piece-of-state)
+    const [activeIndex, setActiveIndex] = useState(null);
+    // setter function updates state & causes component to rerender
     const onTitleClick = (index) => {
-        console.log('title clicked', index);
+        setActiveIndex(index);
     };
 
     const renderedItems = items.map((item, index) => {
@@ -30,6 +34,7 @@ const Accordion = ({ items }) => {
 
     return <div className="ui styled accordion">
         {renderedItems}
+        <h1>{activeIndex}</h1>
     </div>
 };
 
